@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Project — local-only artifacts
+スクリーンショット*.png
+スクリーンショット*.jpg

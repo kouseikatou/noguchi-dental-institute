@@ -1,0 +1,17 @@
+# 一般財団法人野口歯科学研究所 歯科部会
+# 公開URL: https://hideyo-noguchi-mri.com
+
+User-agent: *
+Allow: /
+
+# AIクローラ(参考): 必要に応じてDisallowへ変更
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://hideyo-noguchi-mri.com/sitemap.xml
