@@ -83,13 +83,14 @@
       </div>
 
       <main>
-        <div class="page-visual members-visual">
-          <div>
-            <p class="page-label">Member Organizations</p>
+        <div id="imagebox">
+          <img
+            src="assets/noguchi-hero-refined.png"
+            alt="野口英世博士を含む歴史的肖像写真"
+          />
+          <div class="hero-caption">
             <h1>加入会員</h1>
-            <p>
-              歯科治療技術、学術講演、相談支援、医科歯科連携に関わる団体・機関との連携を通じ、専門知見の共有と相談体制の整備を進めています。
-            </p>
+            <span>歯科治療技術、学術講演、相談支援、医科歯科連携に関わる団体・機関との連携を通じ、専門知見の共有と相談体制の整備を進めています。</span>
           </div>
         </div>
 
@@ -106,74 +107,139 @@
             </section>
 
             <section class="singletxt">
-              <h2>加入会員</h2>
-              <table class="member-table">
-                <thead>
-                  <tr>
-                    <th>医療機関</th>
-                    <th>会員名</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr><td>あさひ歯科クリニック</td><td>内濱 啓次</td></tr>
-                  <tr><td>北原歯科医院</td><td>北原 友也</td></tr>
-                  <tr><td>ののがき歯科医院</td><td>野々垣 憲二</td></tr>
-                  <tr><td>(医)はやし歯科医院</td><td>林 正人</td></tr>
-                  <tr><td>堤デンタルクリニック</td><td>堤 一純</td></tr>
-                  <tr><td>医療法人大倉会 長谷川歯科</td><td>長谷川 茂人</td></tr>
-                  <tr><td>医療法人 正明会 岩井歯科</td><td>岩井 正彦</td></tr>
-                  <tr><td>(医)雄久会 恵比寿南橋デンタルクリニック</td><td>落合 久彦</td></tr>
-                  <tr><td>mioka四季の森クリニック</td><td>秋元 優範</td></tr>
-                  <tr><td>としもり歯科医院</td><td>利森 仁</td></tr>
-                  <tr><td>ソフィア歯科クリニック</td><td>上里 優</td></tr>
-                  <tr><td>田中歯科医院</td><td>田中 壮憲</td></tr>
-                  <tr><td>小幡歯科クリニック</td><td>小幡 登</td></tr>
-                  <tr><td>すぎやま歯科</td><td>杉山 浩一</td></tr>
-                  <tr><td>夕日丘デンタルクリニック</td><td>白井 利明</td></tr>
-                  <tr><td>医療法人社団 高輪会</td><td>植松 康明</td></tr>
-                  <tr><td>デンタルオフィス ケア&amp;キュア</td><td>吉岡 慎哉</td></tr>
-                  <tr><td>中垣歯科医院</td><td>中垣 直毅</td></tr>
-                  <tr><td>おざわ歯科医院</td><td>小澤 俊文</td></tr>
-                  <tr><td>オリオン歯科</td><td>櫻田 雅彦</td></tr>
-                  <tr><td>小野瀬歯科医院</td><td>小野瀬 弘記</td></tr>
-                  <tr><td>澤歯科</td><td>澤 政樹</td></tr>
-                  <tr><td>黒木歯科医院</td><td>黒木 克哉</td></tr>
-                  <tr><td>池田会 池田歯科クリニック</td><td>池田 寛</td></tr>
-                  <tr><td>遠山ビル歯科</td><td>倉田 亮司</td></tr>
-                  <tr><td>高村歯科医院</td><td>高村 剛</td></tr>
-                  <tr><td>藤井歯科医院</td><td>藤井 肇基</td></tr>
-                  <tr><td>新宿フロントタワー歯科</td><td>茂木 励起</td></tr>
-                  <tr><td>(医)健歯会 吉原歯科医院</td><td>吉原 正明</td></tr>
-                  <tr><td>山脇歯科医院</td><td>山脇 均</td></tr>
-                  <tr><td>銀座通り歯科クリニック</td><td>鈴木 正史</td></tr>
-                  <tr><td>ほかお歯科クリニック</td><td>外尾 雅男</td></tr>
-                  <tr><td>ハシグチ歯科</td><td>橋口 知弘</td></tr>
-                  <tr><td>(医)育歩会 坂井歯科医院</td><td>坂井 秀明</td></tr>
-                  <tr><td>生田歯科医院</td><td>生田 純一</td></tr>
-                  <tr><td>ヒルサイドデンタルクリニック</td><td>津久井 明</td></tr>
-                  <tr><td>宮崎歯科医院</td><td>宮崎 尚</td></tr>
-                  <tr><td>山本歯科クリニック</td><td>山本 信吾</td></tr>
-                  <tr><td>鹿島デンタルオフィス</td><td>山田 芳広</td></tr>
-                  <tr><td>春藤歯科医院</td><td>春藤 泰之</td></tr>
-                </tbody>
-              </table>
+              <h2>加入会員一覧</h2>
+
+              <div class="member-group">
+                <h3 class="member-group-label">あ</h3>
+                <ul class="member-cards">
+                  <li class="member-card"><span class="clinic">あさひ歯科クリニック</span><span class="doctor">内濱 啓次</span></li>
+                  <li class="member-card"><span class="clinic">生田歯科医院</span><span class="doctor">生田 純一</span></li>
+                  <li class="member-card"><span class="clinic">池田会 池田歯科クリニック</span><span class="doctor">池田 寛</span></li>
+                  <li class="member-card"><span class="clinic">医療法人 正明会 岩井歯科</span><span class="doctor">岩井 正彦</span></li>
+                  <li class="member-card"><span class="clinic">(医)雄久会 恵比寿南橋デンタルクリニック</span><span class="doctor">落合 久彦</span></li>
+                  <li class="member-card"><span class="clinic">おざわ歯科医院</span><span class="doctor">小澤 俊文</span></li>
+                  <li class="member-card"><span class="clinic">小幡歯科クリニック</span><span class="doctor">小幡 登</span></li>
+                  <li class="member-card"><span class="clinic">小野瀬歯科医院</span><span class="doctor">小野瀬 弘記</span></li>
+                  <li class="member-card"><span class="clinic">オリオン歯科</span><span class="doctor">櫻田 雅彦</span></li>
+                </ul>
+              </div>
+
+              <div class="member-group">
+                <h3 class="member-group-label">か</h3>
+                <ul class="member-cards">
+                  <li class="member-card"><span class="clinic">鹿島デンタルオフィス</span><span class="doctor">山田 芳広</span></li>
+                  <li class="member-card"><span class="clinic">北原歯科医院</span><span class="doctor">北原 友也</span></li>
+                  <li class="member-card"><span class="clinic">銀座通り歯科クリニック</span><span class="doctor">鈴木 正史</span></li>
+                  <li class="member-card"><span class="clinic">黒木歯科医院</span><span class="doctor">黒木 克哉</span></li>
+                </ul>
+              </div>
+
+              <div class="member-group">
+                <h3 class="member-group-label">さ</h3>
+                <ul class="member-cards">
+                  <li class="member-card"><span class="clinic">(医)育歩会 坂井歯科医院</span><span class="doctor">坂井 秀明</span></li>
+                  <li class="member-card"><span class="clinic">澤歯科</span><span class="doctor">澤 政樹</span></li>
+                  <li class="member-card"><span class="clinic">新宿フロントタワー歯科</span><span class="doctor">茂木 励起</span></li>
+                  <li class="member-card"><span class="clinic">すぎやま歯科</span><span class="doctor">杉山 浩一</span></li>
+                  <li class="member-card"><span class="clinic">ソフィア歯科クリニック</span><span class="doctor">上里 優</span></li>
+                </ul>
+              </div>
+
+              <div class="member-group">
+                <h3 class="member-group-label">た</h3>
+                <ul class="member-cards">
+                  <li class="member-card"><span class="clinic">田中歯科医院</span><span class="doctor">田中 壮憲</span></li>
+                  <li class="member-card"><span class="clinic">高村歯科医院</span><span class="doctor">高村 剛</span></li>
+                  <li class="member-card"><span class="clinic">医療法人社団 高輪会</span><span class="doctor">植松 康明</span></li>
+                  <li class="member-card"><span class="clinic">堤デンタルクリニック</span><span class="doctor">堤 一純</span></li>
+                  <li class="member-card"><span class="clinic">デンタルオフィス ケア&amp;キュア</span><span class="doctor">吉岡 慎哉</span></li>
+                  <li class="member-card"><span class="clinic">としもり歯科医院</span><span class="doctor">利森 仁</span></li>
+                  <li class="member-card"><span class="clinic">遠山ビル歯科</span><span class="doctor">倉田 亮司</span></li>
+                </ul>
+              </div>
+
+              <div class="member-group">
+                <h3 class="member-group-label">な</h3>
+                <ul class="member-cards">
+                  <li class="member-card"><span class="clinic">中垣歯科医院</span><span class="doctor">中垣 直毅</span></li>
+                  <li class="member-card"><span class="clinic">ののがき歯科医院</span><span class="doctor">野々垣 憲二</span></li>
+                </ul>
+              </div>
+
+              <div class="member-group">
+                <h3 class="member-group-label">は</h3>
+                <ul class="member-cards">
+                  <li class="member-card"><span class="clinic">ハシグチ歯科</span><span class="doctor">橋口 知弘</span></li>
+                  <li class="member-card"><span class="clinic">(医)はやし歯科医院</span><span class="doctor">林 正人</span></li>
+                  <li class="member-card"><span class="clinic">医療法人大倉会 長谷川歯科</span><span class="doctor">長谷川 茂人</span></li>
+                  <li class="member-card"><span class="clinic">春藤歯科医院</span><span class="doctor">春藤 泰之</span></li>
+                  <li class="member-card"><span class="clinic">ヒルサイドデンタルクリニック</span><span class="doctor">津久井 明</span></li>
+                  <li class="member-card"><span class="clinic">藤井歯科医院</span><span class="doctor">藤井 肇基</span></li>
+                  <li class="member-card"><span class="clinic">ほかお歯科クリニック</span><span class="doctor">外尾 雅男</span></li>
+                </ul>
+              </div>
+
+              <div class="member-group">
+                <h3 class="member-group-label">ま</h3>
+                <ul class="member-cards">
+                  <li class="member-card"><span class="clinic">mioka四季の森クリニック</span><span class="doctor">秋元 優範</span></li>
+                  <li class="member-card"><span class="clinic">宮崎歯科医院</span><span class="doctor">宮崎 尚</span></li>
+                </ul>
+              </div>
+
+              <div class="member-group">
+                <h3 class="member-group-label">や</h3>
+                <ul class="member-cards">
+                  <li class="member-card"><span class="clinic">夕日丘デンタルクリニック</span><span class="doctor">白井 利明</span></li>
+                  <li class="member-card"><span class="clinic">山脇歯科医院</span><span class="doctor">山脇 均</span></li>
+                  <li class="member-card"><span class="clinic">山本歯科クリニック</span><span class="doctor">山本 信吾</span></li>
+                  <li class="member-card"><span class="clinic">(医)健歯会 吉原歯科医院</span><span class="doctor">吉原 正明</span></li>
+                </ul>
+              </div>
             </section>
 
             <section class="singletxt">
               <h2>掲載・加入に関するお問い合わせ</h2>
               <p>加入会員への掲載、講演連携、相談支援協力については下記よりお問い合わせください。</p>
-              <p class="contact-line">
-                <a href="tel:0300000000">03-0000-0000</a>
-                <a href="mailto:info@example.jp">info@example.jp</a>
-              </p>
+              <p class="contact-pending">電話・メールは現在準備中です</p>
             </section>
           </article>
         </div>
       </main>
 
       <footer id="footer">
-        <p>一般財団法人野口歯科学研究所 歯科部会</p>
-        <small>Copyright &copy; 一般財団法人野口歯科学研究所 歯科部会 All Rights Reserved.</small>
+        <div class="footer-inner">
+          <div class="footer-brand">
+            一般財団法人<br>野口歯科学研究所 歯科部会
+            <small>Noguchi Institute of Dental Science / Dental Section</small>
+          </div>
+          <div class="footer-col">
+            <h4>FOUNDATION</h4>
+            <dl>
+              <dt>所在地</dt>
+              <dd>〒466-0842<br>愛知県名古屋市昭和区檀渓通 3-10 LM107</dd>
+              <dt>事業</dt>
+              <dd>歯科治療技術の検討、学術講演会、歯科ホットライン</dd>
+            </dl>
+          </div>
+          <div class="footer-col">
+            <h4>CONTACT</h4>
+            <dl>
+              <dt>電話・メール</dt>
+              <dd><span class="footer-pending">準備中</span></dd>
+              <dt>サイトマップ</dt>
+              <dd>
+                <a href="index.html">TOP</a>
+                <a href="hotline.html">歯科ホットライン</a>
+                <a href="members.html">加入会員</a>
+                <a href="line-card.html">LINE診察券</a>
+              </dd>
+            </dl>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <small>&copy; 一般財団法人野口歯科学研究所 歯科部会 All Rights Reserved.</small>
+        </div>
       </footer>
     </div>
   </body>

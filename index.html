@@ -59,14 +59,14 @@
       "foundingLocation": "東京都",
       "areaServed": "JP",
       "knowsLanguage": "ja",
-      "contactPoint": [{
-        "@type": "ContactPoint",
-        "telephone": "+81-3-0000-0000",
-        "contactType": "customer service",
-        "email": "info@example.jp",
-        "areaServed": "JP",
-        "availableLanguage": ["Japanese"]
-      }],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "檀渓通 3-10 LM107",
+        "addressLocality": "名古屋市昭和区",
+        "addressRegion": "愛知県",
+        "postalCode": "466-0842",
+        "addressCountry": "JP"
+      },
       "sameAs": []
     }
     </script>
@@ -189,7 +189,7 @@
                 </tr>
                 <tr>
                   <th>所在地</th>
-                  <td>〒000-0000 東京都〇〇区〇〇 0-0-0</td>
+                  <td>〒466-0842 愛知県名古屋市昭和区檀渓通 3-10 LM107</td>
                 </tr>
               </table>
             </section>
@@ -207,18 +207,45 @@
             <section id="contact" class="singletxt">
               <h2>お問い合わせ</h2>
               <p>歯科治療技術、説明資料、講演依頼については下記よりお問い合わせください。</p>
-              <p class="contact-line">
-                <a href="tel:0300000000">03-0000-0000</a>
-                <a href="mailto:info@example.jp">info@example.jp</a>
-              </p>
+              <p class="contact-pending">電話・メールは現在準備中です</p>
             </section>
           </article>
         </div>
       </main>
 
       <footer id="footer">
-        <p>一般財団法人野口歯科学研究所 歯科部会</p>
-        <small>Copyright &copy; 一般財団法人野口歯科学研究所 歯科部会 All Rights Reserved.</small>
+        <div class="footer-inner">
+          <div class="footer-brand">
+            一般財団法人<br>野口歯科学研究所 歯科部会
+            <small>Noguchi Institute of Dental Science / Dental Section</small>
+          </div>
+          <div class="footer-col">
+            <h4>FOUNDATION</h4>
+            <dl>
+              <dt>所在地</dt>
+              <dd>〒466-0842<br>愛知県名古屋市昭和区檀渓通 3-10 LM107</dd>
+              <dt>事業</dt>
+              <dd>歯科治療技術の検討、学術講演会、歯科ホットライン</dd>
+            </dl>
+          </div>
+          <div class="footer-col">
+            <h4>CONTACT</h4>
+            <dl>
+              <dt>電話・メール</dt>
+              <dd><span class="footer-pending">準備中</span></dd>
+              <dt>サイトマップ</dt>
+              <dd>
+                <a href="index.html">TOP</a>
+                <a href="hotline.html">歯科ホットライン</a>
+                <a href="members.html">加入会員</a>
+                <a href="line-card.html">LINE診察券</a>
+              </dd>
+            </dl>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <small>&copy; 一般財団法人野口歯科学研究所 歯科部会 All Rights Reserved.</small>
+        </div>
       </footer>
     </div>
   </body>
