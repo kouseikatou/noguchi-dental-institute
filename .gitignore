@@ -11,6 +11,9 @@ Icon
 *.swp
 *.swo
 
+# MCP / tooling metadata
+.serena/
+
 # Project — local-only artifacts
 スクリーンショット*.png
 スクリーンショット*.jpg

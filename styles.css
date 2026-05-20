@@ -487,6 +487,52 @@ ul {
   letter-spacing: 1px;
 }
 
+.contact-info {
+  display: grid;
+  gap: 24px;
+  max-width: var(--read);
+  margin-top: 18px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+
+.contact-info__row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact-info__label {
+  color: var(--muted);
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+.contact-info__phone {
+  display: inline-block;
+  width: fit-content;
+  color: var(--brown);
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(28px, 3.4vw, 38px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 2px;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.contact-info__phone:hover {
+  color: var(--accent-deep);
+}
+
+.contact-info__phone-note {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
 /* lower-page hero uses #imagebox + .hero-caption (unified with TOP) */
 
 .feature-grid {
