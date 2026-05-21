@@ -328,6 +328,7 @@ ul {
 
 .dark-block.singletxt {
   position: relative;
+  width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   margin-bottom: 96px;
