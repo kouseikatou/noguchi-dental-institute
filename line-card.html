@@ -42,6 +42,7 @@
     <link rel="shortcut icon" href="assets/favicon-32.png" />
 
     <link rel="stylesheet" href="styles.css" />
+    <script src="site.js"></script>
 
     <!-- パンくず構造化データ -->
     <script type="application/ld+json">
@@ -57,30 +58,7 @@
   </head>
   <body>
     <div id="wrapper">
-      <div class="fixed-header">
-        <header id="header">
-          <a class="logo-area" href="index.html" aria-label="一般財団法人野口歯科学研究所 歯科部会 ホーム">
-            <span class="logo-main">一般財団法人<br>野口歯科学研究所 歯科部会</span>
-            <span class="logo-sub">Noguchi Institute of Dental Science / Dental Section</span>
-          </a>
-          <div class="header-copy">
-            歯科治療技術・学術相談・専門ホットライン
-          </div>
-          <a class="header-contact" href="index.html#contact">お問い合わせ</a>
-        </header>
-
-        <nav id="headnav" aria-label="主要ナビゲーション">
-          <ul id="menu">
-            <li><a href="index.html">TOP</a></li>
-            <li><a href="index.html#statement">設立趣旨</a></li>
-            <li><a href="index.html#lecture">学術講演会</a></li>
-            <li><a href="hotline.html">歯科ホットライン</a></li>
-            <li><a href="members.html">加入会員</a></li>
-            <li><a href="line-card.html" aria-current="page">LINE診察券</a></li>
-            <li><a href="index.html#contact">お問い合わせ</a></li>
-          </ul>
-        </nav>
-      </div>
+      <site-header current="line-card"></site-header>
 
       <main>
         <div id="imagebox">
@@ -126,32 +104,14 @@
                     <p class="option-card__desc">これまで通り、カードタイプの診察券を発行します。</p>
 
                     <div class="option-card__visual">
-                      <div class="paper-card" role="img" aria-label="紙の診察券モックアップ">
-                        <div class="paper-card__head">
-                          <span class="paper-card__org">
-                            <span class="paper-card__org-mark" aria-hidden="true">N</span>
-                            一般財団法人<br>野口歯科学研究所 歯科部会
-                          </span>
-                          <span class="paper-card__type">診察券</span>
-                        </div>
-                        <div class="paper-card__id-row">
-                          <span class="paper-card__id-label">会員番号</span>
-                          <span class="paper-card__id-value">1234567</span>
-                        </div>
-                        <div class="paper-card__name-kana">ノグチ タロウ</div>
-                        <div class="paper-card__name">野口 太郎<span class="paper-card__name-honor">様</span></div>
-                        <div class="paper-card__expire">
-                          <span class="paper-card__expire-label">有効期限</span>
-                          <span>2026年12月末</span>
-                        </div>
-                        <div class="paper-card__phone">
-                          <span class="paper-card__phone-icon" aria-hidden="true">☎</span>
-                          <span class="paper-card__phone-info">
-                            <span class="paper-card__phone-num">0120-793-550</span>
-                            <span class="paper-card__phone-note">歯科部会ホットライン</span>
-                          </span>
-                        </div>
-                      </div>
+                      <img
+                        class="option-card__mock"
+                        src="assets/paper-card-mock.png"
+                        alt="紙の診察券モックアップ(会員番号・氏名・有効期限・歯科部会ホットライン 0120-793-550 を掲載)"
+                        width="1448"
+                        height="1086"
+                        loading="lazy"
+                      />
                     </div>
 
                     <ul class="option-card__features">
@@ -167,37 +127,14 @@
                     <p class="option-card__desc">LINEで使えるデジタル診察券を発行できます。</p>
 
                     <div class="option-card__visual">
-                      <div class="phone-mock" role="img" aria-label="LINE診察券モックアップ">
-                        <div class="phone-mock__notch" aria-hidden="true"></div>
-                        <div class="phone-mock__screen">
-                          <div class="phone-mock__statusbar" aria-hidden="true">
-                            <span>9:41</span>
-                            <span class="phone-mock__statusbar-icons">
-                              <span></span><span></span><span></span>
-                            </span>
-                          </div>
-                          <div class="phone-mock__card-area">
-                            <div class="phone-mock__line-logo" aria-hidden="true">LINE</div>
-                            <div class="phone-mock__org">一般財団法人<br>野口歯科学研究所 歯科部会</div>
-                            <div class="phone-mock__type">LINE診察券</div>
-                            <div class="phone-mock__id-row">
-                              <span>会員番号</span>
-                              <span class="phone-mock__id-value">1234567</span>
-                            </div>
-                            <div class="phone-mock__name">野口 太郎</div>
-                            <div class="phone-mock__expire">有効期限 2026年12月末</div>
-                            <div class="phone-mock__phone">
-                              <span class="phone-mock__phone-icon" aria-hidden="true">☎</span>
-                              <span class="phone-mock__phone-num">0120-793-550</span>
-                            </div>
-                          </div>
-                          <div class="phone-mock__tabbar" aria-hidden="true">
-                            <span class="phone-mock__tab">マイページ</span>
-                            <span class="phone-mock__tab">相談窓口</span>
-                            <span class="phone-mock__tab">会員証</span>
-                          </div>
-                        </div>
-                      </div>
+                      <img
+                        class="option-card__mock option-card__mock--phone"
+                        src="assets/line-card-mock.png"
+                        alt="LINE診察券モックアップ(スマートフォン画面に表示された会員番号・氏名・有効期限・歯科部会ホットライン 0120-793-550)"
+                        width="1024"
+                        height="1536"
+                        loading="lazy"
+                      />
                     </div>
 
                     <ul class="option-card__features">
@@ -363,42 +300,7 @@
         </div>
       </main>
 
-      <footer id="footer">
-        <div class="footer-inner">
-          <div class="footer-brand">
-            一般財団法人<br>野口歯科学研究所 歯科部会
-            <small>Noguchi Institute of Dental Science / Dental Section</small>
-          </div>
-          <div class="footer-col">
-            <h4>FOUNDATION</h4>
-            <dl>
-              <dt>事務窓口</dt>
-              <dd>〒466-0842<br>愛知県名古屋市昭和区檀渓通 3-10 LM107</dd>
-              <dt>事業</dt>
-              <dd>歯科治療技術の検討、学術講演会、歯科ホットライン</dd>
-            </dl>
-          </div>
-          <div class="footer-col">
-            <h4>CONTACT</h4>
-            <dl>
-              <dt>歯科部会ホットライン</dt>
-              <dd><a href="tel:0120-793-550">0120-793-550</a>（フリーダイヤル）</dd>
-              <dt>メール</dt>
-              <dd><span class="footer-pending">準備中</span></dd>
-              <dt>サイトマップ</dt>
-              <dd>
-                <a href="index.html">TOP</a>
-                <a href="hotline.html">歯科ホットライン</a>
-                <a href="members.html">加入会員</a>
-                <a href="line-card.html">LINE診察券</a>
-              </dd>
-            </dl>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <small>&copy; 一般財団法人野口歯科学研究所 歯科部会 All Rights Reserved.</small>
-        </div>
-      </footer>
+      <site-footer></site-footer>
     </div>
   </body>
 </html>

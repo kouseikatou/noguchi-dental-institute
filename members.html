@@ -42,6 +42,7 @@
     <link rel="shortcut icon" href="assets/favicon-32.png" />
 
     <link rel="stylesheet" href="styles.css" />
+    <script src="site.js"></script>
 
     <!-- パンくず構造化データ -->
     <script type="application/ld+json">
@@ -57,30 +58,7 @@
   </head>
   <body>
     <div id="wrapper">
-      <div class="fixed-header">
-        <header id="header">
-          <a class="logo-area" href="index.html" aria-label="一般財団法人野口歯科学研究所 歯科部会 ホーム">
-            <span class="logo-main">一般財団法人<br>野口歯科学研究所 歯科部会</span>
-            <span class="logo-sub">Noguchi Institute of Dental Science / Dental Section</span>
-          </a>
-          <div class="header-copy">
-            歯科治療技術・学術相談・専門ホットライン
-          </div>
-          <a class="header-contact" href="index.html#contact">お問い合わせ</a>
-        </header>
-
-        <nav id="headnav" aria-label="主要ナビゲーション">
-          <ul id="menu">
-            <li><a href="index.html">TOP</a></li>
-            <li><a href="index.html#statement">設立趣旨</a></li>
-            <li><a href="index.html#lecture">学術講演会</a></li>
-            <li><a href="hotline.html">歯科ホットライン</a></li>
-            <li><a href="members.html" aria-current="page">加入会員</a></li>
-            <li><a href="line-card.html">LINE診察券</a></li>
-            <li><a href="index.html#contact">お問い合わせ</a></li>
-          </ul>
-        </nav>
-      </div>
+      <site-header current="members"></site-header>
 
       <main>
         <div id="imagebox">
@@ -223,42 +201,7 @@
         </div>
       </main>
 
-      <footer id="footer">
-        <div class="footer-inner">
-          <div class="footer-brand">
-            一般財団法人<br>野口歯科学研究所 歯科部会
-            <small>Noguchi Institute of Dental Science / Dental Section</small>
-          </div>
-          <div class="footer-col">
-            <h4>FOUNDATION</h4>
-            <dl>
-              <dt>事務窓口</dt>
-              <dd>〒466-0842<br>愛知県名古屋市昭和区檀渓通 3-10 LM107</dd>
-              <dt>事業</dt>
-              <dd>歯科治療技術の検討、学術講演会、歯科ホットライン</dd>
-            </dl>
-          </div>
-          <div class="footer-col">
-            <h4>CONTACT</h4>
-            <dl>
-              <dt>歯科部会ホットライン</dt>
-              <dd><a href="tel:0120-793-550">0120-793-550</a>（フリーダイヤル）</dd>
-              <dt>メール</dt>
-              <dd><span class="footer-pending">準備中</span></dd>
-              <dt>サイトマップ</dt>
-              <dd>
-                <a href="index.html">TOP</a>
-                <a href="hotline.html">歯科ホットライン</a>
-                <a href="members.html">加入会員</a>
-                <a href="line-card.html">LINE診察券</a>
-              </dd>
-            </dl>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <small>&copy; 一般財団法人野口歯科学研究所 歯科部会 All Rights Reserved.</small>
-        </div>
-      </footer>
+      <site-footer></site-footer>
     </div>
   </body>
 </html>
