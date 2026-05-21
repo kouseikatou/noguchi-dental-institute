@@ -635,6 +635,56 @@ ul {
   margin-bottom: 0;
 }
 
+/* feature-grid 内の「成果物」表示 */
+.feature-grid .card-deliverable {
+  display: block;
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--line);
+  color: var(--accent-deep);
+  font-size: 12.5px;
+  letter-spacing: 0.5px;
+  line-height: 1.65;
+}
+
+.feature-grid .card-deliverable strong {
+  margin-right: 6px;
+  color: var(--brown);
+  font-weight: 600;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+}
+
+/* セクション末尾のスコープ注釈 */
+.scope-note {
+  max-width: var(--read);
+  margin-top: 28px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.85;
+  text-indent: 0;
+}
+
+/* 章番号を持たない強調セクション(付加価値ブロック) */
+.highlight-block.singletxt {
+  counter-increment: none;
+  padding: clamp(28px, 4vw, 44px) clamp(24px, 4vw, 48px);
+  background: var(--paper-3);
+  border-top: none;
+  border-left: 3px solid var(--accent);
+}
+
+.highlight-block.singletxt > h2 {
+  margin-top: 0;
+  font-size: clamp(22px, 2.4vw, 28px);
+  letter-spacing: 1.5px;
+}
+
+.highlight-block.singletxt > h2::before {
+  content: none;
+}
+
 /* ─── 「紙＋LINE」2選択ショーケース ─────────────── */
 
 .option-cards {
