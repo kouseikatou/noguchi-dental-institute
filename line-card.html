@@ -107,46 +107,113 @@
             </section>
 
             <section class="singletxt">
-              <h2>デザインイメージ</h2>
+              <h2>診察券の発行方法</h2>
               <p>
-                「従来の紙診察券に近い安心感」を残しながらデジタル化するという方針で、医院ロゴ・診察券番号・次回予約・QR提示を備えた、シンプルで高級感のあるUIを設計します。
+                紙の診察券と、LINEで使えるデジタル診察券の両方に対応しています。患者様の慣れや医院の運用に合わせて、ご希望の発行方法をお選びいただけます。
               </p>
-              <div class="ds-card-showcase">
-                <div class="ds-card-stage" role="img" aria-label="LINE診察券のデザインイメージ — 紙診察券に近い構成のUI">
-                  <div class="ds-card">
-                    <div class="ds-card__head">
-                      <div class="ds-card__clinic">○○歯科<br>クリニック</div>
-                      <span class="ds-card__brand">LINE 診察券</span>
-                    </div>
-                    <p class="ds-card__label">PATIENT ID</p>
-                    <p class="ds-card__id">00012345</p>
-                    <p class="ds-card__name">山田 太郎 様</p>
-                    <div class="ds-card__next">
-                      <span class="ds-card__next-label">NEXT APPOINTMENT</span>
-                      <span class="ds-card__next-value">2026年6月15日（月）14:30</span>
-                    </div>
-                    <div class="ds-card__foot">
-                      <div class="ds-card__qr" aria-hidden="true"></div>
-                      <p class="ds-card__foot-note">受付時にこちらの<br>QRをご提示ください。</p>
-                    </div>
-                  </div>
+
+              <div class="option-cards">
+                <div class="option-cards__heading">
+                  <h3>診察券の発行方法が選べるようになりました</h3>
+                  <p>紙の診察券とLINEで使えるデジタル診察券の両方に対応しています</p>
                 </div>
-                <div class="ds-card-notes">
-                  <div>
-                    <h3>紙診察券の安心感を残す</h3>
-                    <p>診察券番号・氏名・次回予約の3要素を従来通り中心に据え、見慣れた構成でご高齢の患者様にも違和感なくご利用いただけます。</p>
+
+                <div class="option-cards__grid">
+
+                  <div class="option-card">
+                    <span class="option-card__badge">選べる ①</span>
+                    <h4 class="option-card__title">紙の診察券</h4>
+                    <p class="option-card__desc">これまで通り、カードタイプの診察券を発行します。</p>
+
+                    <div class="option-card__visual">
+                      <div class="paper-card" role="img" aria-label="紙の診察券モックアップ">
+                        <div class="paper-card__head">
+                          <span class="paper-card__org">
+                            <span class="paper-card__org-mark" aria-hidden="true">N</span>
+                            一般財団法人<br>野口歯科学研究所 歯科部会
+                          </span>
+                          <span class="paper-card__type">診察券</span>
+                        </div>
+                        <div class="paper-card__id-row">
+                          <span class="paper-card__id-label">会員番号</span>
+                          <span class="paper-card__id-value">1234567</span>
+                        </div>
+                        <div class="paper-card__name-kana">ノグチ タロウ</div>
+                        <div class="paper-card__name">野口 太郎<span class="paper-card__name-honor">様</span></div>
+                        <div class="paper-card__expire">
+                          <span class="paper-card__expire-label">有効期限</span>
+                          <span>2026年12月末</span>
+                        </div>
+                        <div class="paper-card__phone">
+                          <span class="paper-card__phone-icon" aria-hidden="true">☎</span>
+                          <span class="paper-card__phone-info">
+                            <span class="paper-card__phone-num">0120-793-550</span>
+                            <span class="paper-card__phone-note">歯科部会ホットライン</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <ul class="option-card__features">
+                      <li>これまで通りの安心のカードタイプ</li>
+                      <li>フリーダイヤルで相談しやすい</li>
+                      <li>財布に入れていつでも携帯可能</li>
+                    </ul>
                   </div>
-                  <div>
-                    <h3>医院ロゴで個性を表現</h3>
-                    <p>院ごとにロゴ・院名タイポグラフィを差し替え可能。LINE上での「自院の診察券」としての一貫性を保ちます。</p>
+
+                  <div class="option-card">
+                    <span class="option-card__badge">選べる ②</span>
+                    <h4 class="option-card__title">LINE診察券</h4>
+                    <p class="option-card__desc">LINEで使えるデジタル診察券を発行できます。</p>
+
+                    <div class="option-card__visual">
+                      <div class="phone-mock" role="img" aria-label="LINE診察券モックアップ">
+                        <div class="phone-mock__notch" aria-hidden="true"></div>
+                        <div class="phone-mock__screen">
+                          <div class="phone-mock__statusbar" aria-hidden="true">
+                            <span>9:41</span>
+                            <span class="phone-mock__statusbar-icons">
+                              <span></span><span></span><span></span>
+                            </span>
+                          </div>
+                          <div class="phone-mock__card-area">
+                            <div class="phone-mock__line-logo" aria-hidden="true">LINE</div>
+                            <div class="phone-mock__org">一般財団法人<br>野口歯科学研究所 歯科部会</div>
+                            <div class="phone-mock__type">LINE診察券</div>
+                            <div class="phone-mock__id-row">
+                              <span>会員番号</span>
+                              <span class="phone-mock__id-value">1234567</span>
+                            </div>
+                            <div class="phone-mock__name">野口 太郎</div>
+                            <div class="phone-mock__expire">有効期限 2026年12月末</div>
+                            <div class="phone-mock__phone">
+                              <span class="phone-mock__phone-icon" aria-hidden="true">☎</span>
+                              <span class="phone-mock__phone-num">0120-793-550</span>
+                            </div>
+                          </div>
+                          <div class="phone-mock__tabbar" aria-hidden="true">
+                            <span class="phone-mock__tab">マイページ</span>
+                            <span class="phone-mock__tab">相談窓口</span>
+                            <span class="phone-mock__tab">会員証</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <ul class="option-card__features">
+                      <li>スマホでいつでも確認できる</li>
+                      <li>紛失の心配がない</li>
+                      <li>ワンタップで相談窓口にアクセス</li>
+                    </ul>
                   </div>
-                  <div>
-                    <h3>QR提示で受付がスムーズ</h3>
-                    <p>来院時に画面のQRをご提示いただくだけ。受付業務の標準化と待ち時間短縮に寄与します。</p>
-                  </div>
+
+                </div>
+
+                <div class="option-cards__footer">
+                  <p>どちらの診察券でも、歯科部会ホットラインをご利用いただけます。</p>
+                  <p>ご希望の発行方法をお選びください。</p>
                 </div>
               </div>
-              <p class="ds-card-caption">※ 上記はデザインイメージです。実際のレイアウトは医院ごとにカスタマイズいたします。</p>
             </section>
 
             <section class="singletxt">
