@@ -338,6 +338,12 @@ ul {
   border-top: none;
 }
 
+/* 1番目に置かれた dark-block は #content の上余白を打ち消し、
+   ヒーロー画像の直下にぴったり接続させる */
+.dark-block.singletxt:first-child {
+  margin-top: calc(0px - clamp(56px, 6vw, 92px));
+}
+
 .dark-block.singletxt::before {
   content: "";
   position: absolute;
