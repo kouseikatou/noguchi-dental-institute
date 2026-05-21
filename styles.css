@@ -533,6 +533,33 @@ ul {
   letter-spacing: 1px;
 }
 
+.contact-info__purposes {
+  display: grid;
+  gap: 4px;
+  margin-top: 10px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--line);
+  list-style: none;
+}
+
+.contact-info__purposes li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--ink);
+  font-size: 13.5px;
+  line-height: 1.85;
+}
+
+.contact-info__purposes li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.88em;
+  width: 8px;
+  height: 1px;
+  background: var(--accent);
+}
+
 /* lower-page hero uses #imagebox + .hero-caption (unified with TOP) */
 
 .feature-grid {
@@ -540,6 +567,11 @@ ul {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 28px;
   max-width: 900px;
+}
+
+.feature-grid--2col {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 760px;
 }
 
 .feature-grid > div {
@@ -553,6 +585,218 @@ ul {
 
 .feature-grid p {
   margin-bottom: 0;
+}
+
+/* ─── LINE診察券 デザインモックアップ ─────────────── */
+
+.ds-card-showcase {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 48px;
+  align-items: center;
+  max-width: 940px;
+  margin-top: 8px;
+}
+
+.ds-card-stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 480px;
+  padding: 36px 24px;
+  background:
+    radial-gradient(120% 80% at 30% 0%, rgba(74, 57, 51, 0.04), transparent 60%),
+    linear-gradient(180deg, var(--paper-2) 0%, var(--paper-3) 100%);
+}
+
+.ds-card-stage::before,
+.ds-card-stage::after {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(45, 32, 28, 0.08);
+  pointer-events: none;
+}
+
+.ds-card-stage::after {
+  inset: 20px;
+  border-color: transparent;
+  border-top: 1px solid rgba(45, 32, 28, 0.05);
+}
+
+.ds-card {
+  position: relative;
+  width: min(320px, 100%);
+  padding: 26px 24px 22px;
+  background: var(--white);
+  box-shadow:
+    0 1px 0 rgba(45, 32, 28, 0.04),
+    0 18px 40px rgba(45, 32, 28, 0.12),
+    0 30px 80px rgba(45, 32, 28, 0.08);
+  border-radius: 4px;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  color: var(--ink);
+  transform: rotate(-1deg);
+}
+
+.ds-card__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.ds-card__clinic {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: 1px;
+}
+
+.ds-card__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 8px;
+  background: #06c755;
+  color: #ffffff;
+  font-family: "Meiryo", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+.ds-card__brand::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.ds-card__label {
+  margin: 14px 0 4px;
+  color: var(--muted);
+  font-family: "Meiryo", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.ds-card__id {
+  font-family: "Courier New", monospace;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 4px;
+}
+
+.ds-card__name {
+  margin-top: 4px;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}
+
+.ds-card__next {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--line);
+}
+
+.ds-card__next-label {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--accent-deep);
+  font-family: "Meiryo", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.ds-card__next-value {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.ds-card__foot {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.ds-card__qr {
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  background:
+    /* corner finder squares */
+    linear-gradient(var(--ink), var(--ink)) 0 0 / 14px 14px no-repeat,
+    linear-gradient(var(--ink), var(--ink)) 100% 0 / 14px 14px no-repeat,
+    linear-gradient(var(--ink), var(--ink)) 0 100% / 14px 14px no-repeat,
+    /* inner white in finder */
+    linear-gradient(var(--white), var(--white)) 4px 4px / 6px 6px no-repeat,
+    linear-gradient(var(--white), var(--white)) calc(100% - 4px) 4px / 6px 6px no-repeat,
+    linear-gradient(var(--white), var(--white)) 4px calc(100% - 4px) / 6px 6px no-repeat,
+    /* data dots — synthetic pattern */
+    radial-gradient(var(--ink) 1px, transparent 1.6px) 18px 0 / 4px 4px,
+    var(--white);
+  border: 1px solid var(--ink);
+}
+
+.ds-card__foot-note {
+  color: var(--muted);
+  font-family: "Meiryo", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-size: 11px;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+}
+
+.ds-card-notes {
+  display: grid;
+  gap: 18px;
+}
+
+.ds-card-notes h3 {
+  margin: 0 0 6px;
+  color: var(--brown);
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.ds-card-notes p {
+  margin: 0;
+  color: #332722;
+  font-size: 14px;
+  line-height: 1.95;
+}
+
+.ds-card-caption {
+  margin-top: 22px;
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.8px;
+}
+
+@media (max-width: 840px) {
+  .ds-card-showcase {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .ds-card-stage {
+    min-height: 380px;
+    padding: 28px 16px;
+  }
 }
 
 .flow-list {
