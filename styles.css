@@ -324,7 +324,7 @@ ul {
   line-height: 1.5;
 }
 
-/* ─── 黒背景反転ブロック（フルワイド） ─────────────── */
+/* ─── 黒背景反転ブロック（フルワイド・カラムも広く） ─────────────── */
 
 .dark-block.singletxt {
   position: relative;
@@ -333,8 +333,8 @@ ul {
   margin-bottom: 96px;
   padding-top: clamp(64px, 8vw, 110px);
   padding-bottom: clamp(56px, 7vw, 96px);
-  padding-left: max(var(--gutter), calc(50vw - 50%));
-  padding-right: max(var(--gutter), calc(50vw - 50%));
+  padding-left: max(var(--gutter), calc((100vw - var(--content)) / 2 + var(--gutter)));
+  padding-right: max(var(--gutter), calc((100vw - var(--content)) / 2 + var(--gutter)));
   background: var(--ink);
   color: var(--white);
   border-top: none;
@@ -344,7 +344,7 @@ ul {
   content: "";
   position: absolute;
   top: 0;
-  left: max(var(--gutter), calc(50vw - 50%));
+  left: max(var(--gutter), calc((100vw - var(--content)) / 2 + var(--gutter)));
   width: 56px;
   height: 2px;
   background: var(--accent);
@@ -361,8 +361,8 @@ ul {
 }
 
 .dark-block.singletxt p {
+  max-width: none;
   color: #e8e0d4;
-  max-width: var(--read);
 }
 
 .dark-block.singletxt h3 {
@@ -634,10 +634,6 @@ ul {
 /* ─── 「紙＋LINE」2選択ショーケース ─────────────── */
 
 .option-cards {
-  /* 装飾色は墨に統一。LINE公式ロゴ用にのみ --line-green を残す */
-  --option-green: var(--brown);
-  --option-green-soft: rgba(45, 32, 28, 0.04);
-  --line-green: #06c755;
   margin-top: 8px;
   max-width: 920px;
 }
@@ -729,6 +725,17 @@ ul {
   min-height: 200px;
 }
 
+.option-card__mock {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+}
+
+.option-card__mock--phone {
+  max-width: 220px;
+}
+
 .option-card__features {
   list-style: none;
   display: grid;
@@ -758,342 +765,6 @@ ul {
   font-family: var(--mincho);
   font-size: 14px;
   font-weight: 500;
-}
-
-/* ─── 紙の診察券モックアップ ─── */
-
-.paper-card {
-  width: 100%;
-  max-width: 290px;
-  padding: 14px 16px 14px;
-  background: var(--white);
-  border: 1px solid rgba(45, 32, 28, 0.18);
-  border-radius: 0;
-  box-shadow: none;
-  font-family: var(--mincho);
-  color: var(--ink);
-}
-
-.paper-card__head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--line);
-}
-
-.paper-card__org {
-  font-size: 9px;
-  color: var(--brown);
-  letter-spacing: 0.3px;
-  line-height: 1.3;
-  flex: 1;
-}
-
-.paper-card__org-mark {
-  display: inline-grid;
-  place-items: center;
-  width: 14px;
-  height: 14px;
-  margin-right: 4px;
-  background: var(--brown);
-  color: var(--white);
-  border-radius: 0;
-  font-size: 8px;
-  font-weight: 700;
-  font-family: var(--mincho);
-  vertical-align: middle;
-}
-
-.paper-card__type {
-  color: var(--muted);
-  font-size: 11px;
-  letter-spacing: 2px;
-  flex-shrink: 0;
-}
-
-.paper-card__id-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin: 10px 0 6px;
-}
-
-.paper-card__id-label,
-.paper-card__expire-label {
-  color: var(--muted);
-  font-size: 9px;
-  letter-spacing: 0.6px;
-}
-
-.paper-card__id-value {
-  font-family: "Courier New", monospace;
-  font-size: 13px;
-  letter-spacing: 1px;
-}
-
-.paper-card__name-kana {
-  margin-top: 6px;
-  font-size: 9px;
-  color: var(--muted);
-  letter-spacing: 2.5px;
-}
-
-.paper-card__name {
-  margin: 2px 0 4px;
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: 3px;
-}
-
-.paper-card__name-honor {
-  margin-left: 4px;
-  font-size: 12px;
-  font-weight: 400;
-  color: var(--muted);
-  letter-spacing: 1px;
-}
-
-.paper-card__expire {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin: 6px 0 10px;
-  font-size: 10px;
-}
-
-.paper-card__phone {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 7px 9px;
-  background: transparent;
-  border: 1px solid var(--line);
-  border-radius: 0;
-}
-
-.paper-card__phone-icon {
-  display: grid;
-  place-items: center;
-  width: 22px;
-  height: 22px;
-  background: var(--brown);
-  color: var(--white);
-  border-radius: 0;
-  font-size: 11px;
-  flex-shrink: 0;
-}
-
-.paper-card__phone-info {
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-  flex: 1;
-}
-
-.paper-card__phone-num {
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.6px;
-}
-
-.paper-card__phone-note {
-  font-size: 9px;
-  color: var(--muted);
-  letter-spacing: 0.4px;
-}
-
-/* ─── スマホ風モックアップ ─── */
-
-.phone-mock {
-  position: relative;
-  width: 100%;
-  max-width: 210px;
-  padding: 8px 6px 12px;
-  background: var(--ink);
-  border-radius: 26px;
-  box-shadow: none;
-}
-
-.phone-mock__notch {
-  position: absolute;
-  top: 14px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 56px;
-  height: 14px;
-  background: var(--ink);
-  border-radius: 8px;
-  z-index: 2;
-}
-
-.phone-mock__screen {
-  position: relative;
-  background: #fafafa;
-  border-radius: 18px;
-  overflow: hidden;
-  padding: 30px 10px 8px;
-}
-
-.phone-mock__statusbar {
-  position: absolute;
-  top: 8px;
-  left: 14px;
-  right: 14px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: "Helvetica Neue", sans-serif;
-  font-size: 8px;
-  font-weight: 600;
-  color: var(--ink);
-  z-index: 1;
-}
-
-.phone-mock__statusbar-icons {
-  display: inline-flex;
-  gap: 3px;
-  align-items: center;
-}
-
-.phone-mock__statusbar-icons span {
-  display: block;
-  width: 5px;
-  height: 5px;
-  background: var(--ink);
-  border-radius: 1px;
-}
-
-.phone-mock__card-area {
-  position: relative;
-  padding: 10px;
-  background: var(--white);
-  border: 1px solid rgba(45, 32, 28, 0.12);
-  border-radius: 0;
-  box-shadow: none;
-  font-family: var(--mincho);
-}
-
-.phone-mock__line-logo {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  display: grid;
-  place-items: center;
-  width: 24px;
-  height: 24px;
-  background: var(--line-green);
-  color: var(--white);
-  border-radius: 5px;
-  font-family: "Helvetica Neue", sans-serif;
-  font-size: 8px;
-  font-weight: 700;
-  letter-spacing: 0.3px;
-}
-
-.phone-mock__org {
-  font-size: 8px;
-  color: var(--brown);
-  margin-bottom: 4px;
-  letter-spacing: 0.3px;
-  max-width: 130px;
-  line-height: 1.35;
-}
-
-.phone-mock__type {
-  font-size: 8px;
-  color: var(--muted);
-  margin-bottom: 6px;
-  padding-bottom: 5px;
-  border-bottom: 1px solid var(--line);
-  letter-spacing: 1.5px;
-}
-
-.phone-mock__id-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin: 5px 0 2px;
-  font-size: 8px;
-  color: var(--muted);
-}
-
-.phone-mock__id-value {
-  font-family: "Courier New", monospace;
-  font-size: 11px;
-  color: var(--ink);
-  letter-spacing: 0.5px;
-}
-
-.phone-mock__name {
-  margin: 2px 0;
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 1.5px;
-}
-
-.phone-mock__expire {
-  font-size: 8px;
-  color: var(--muted);
-  margin: 3px 0 6px;
-}
-
-.phone-mock__phone {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 5px 6px;
-  background: transparent;
-  border: 1px solid var(--line);
-  border-radius: 0;
-  margin-top: 4px;
-}
-
-.phone-mock__phone-icon {
-  display: grid;
-  place-items: center;
-  width: 16px;
-  height: 16px;
-  background: var(--brown);
-  color: var(--white);
-  border-radius: 0;
-  font-size: 8px;
-  flex-shrink: 0;
-}
-
-.phone-mock__phone-num {
-  font-family: "Yu Mincho", serif;
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-}
-
-.phone-mock__tabbar {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 8px;
-  padding-top: 6px;
-  border-top: 1px solid var(--line);
-}
-
-.phone-mock__tab {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3px;
-  font-size: 6px;
-  color: var(--muted);
-  letter-spacing: 0.3px;
-}
-
-.phone-mock__tab::before {
-  content: "";
-  display: block;
-  width: 10px;
-  height: 10px;
-  border-radius: 2px;
-  background: var(--paper-2);
 }
 
 /* footer message under cards */
