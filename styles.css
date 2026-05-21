@@ -14,8 +14,9 @@
   --accent-soft: rgba(156, 124, 77, 0.12);
   --soft-shadow: 0 18px 48px rgba(45, 32, 28, 0.08);
   --content: 1160px;
-  --read: 760px;
+  --read: 640px;
   --gutter: clamp(20px, 5vw, 72px);
+  --mincho: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Noto Serif JP", "Times New Roman", serif;
 }
 
 :focus-visible {
@@ -45,9 +46,12 @@ body {
   min-height: 100vh;
   color: var(--ink);
   background: var(--paper);
-  font-family: "Meiryo", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  font-family: var(--mincho);
   font-size: 16px;
-  line-height: 1.9;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  font-feature-settings: "palt" 1;
+  text-rendering: optimizeLegibility;
 }
 
 a {
@@ -261,6 +265,7 @@ ul {
   width: min(100%, var(--content));
   margin: 0 auto;
   padding: clamp(56px, 6vw, 92px) var(--gutter) 86px;
+  counter-reset: section;
 }
 
 #main {
@@ -284,38 +289,52 @@ ul {
 
 .singletxt p {
   max-width: var(--read);
-  margin: 0 0 18px;
+  margin: 0 0 1.4em;
   color: #332722;
   font-size: 16px;
   line-height: 2;
+}
+
+.singletxt > p {
+  text-indent: 1em;
 }
 
 .title,
 .singletxt h2 {
   position: relative;
   margin: 0 0 28px;
-  padding-left: 18px;
+  padding-left: 0;
   color: var(--brown);
-  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-family: var(--mincho);
   font-size: clamp(25px, 2.8vw, 34px);
   font-weight: 500;
   line-height: 1.38;
-  letter-spacing: 1px;
-}
-
-.title::before,
-.singletxt h2::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.36em;
-  width: 4px;
-  height: 0.85em;
-  background: var(--accent);
+  letter-spacing: 2px;
 }
 
 .singletxt h2 {
   margin-top: 12px;
+}
+
+/* 岩波調・章番号 (一・二・三 …) */
+.singletxt:not(.notice-block) {
+  counter-increment: section;
+}
+
+.singletxt:not(.notice-block) > h2::before {
+  content: counter(section, cjk-ideographic);
+  display: block;
+  margin: 0 0 10px;
+  color: var(--accent-deep);
+  font-family: var(--mincho);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 10px;
+}
+
+/* notice-block 内のタイトル(h2.title)は既存の「── お知らせ」表示を保持 */
+.notice-block .title::before {
+  content: none;
 }
 
 .singletxt h3 {
@@ -324,6 +343,45 @@ ul {
   font-size: 18px;
   font-weight: 600;
   line-height: 1.5;
+}
+
+/* ─── 黒背景反転ブロック ─────────────── */
+
+.dark-block.singletxt {
+  margin: 0 0 96px;
+  padding: 56px clamp(28px, 5vw, 64px) 52px;
+  background: var(--ink);
+  color: var(--white);
+  border-top: none;
+}
+
+.dark-block.singletxt::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: clamp(28px, 5vw, 64px);
+  width: 56px;
+  height: 2px;
+  background: var(--accent);
+}
+
+.dark-block.singletxt > h2,
+.dark-block.singletxt .title {
+  margin-top: 0;
+  color: var(--white);
+}
+
+.dark-block.singletxt > h2::before {
+  color: var(--accent);
+}
+
+.dark-block.singletxt p {
+  color: #e8e0d4;
+  max-width: var(--read);
+}
+
+.dark-block.singletxt h3 {
+  color: var(--sand);
 }
 
 .notice-block {
@@ -375,6 +433,7 @@ ul {
   font-size: 15.5px;
   line-height: 2.05;
   text-align: left;
+  text-indent: 1em;
 }
 
 .notice-block p:last-child {
@@ -1173,15 +1232,15 @@ ul {
   flex-direction: column;
   gap: 6px;
   padding: 20px 22px 22px;
-  background: var(--paper-3);
+  background: transparent;
+  border: 1px solid var(--line);
   border-left: 2px solid var(--accent);
-  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+  transition: border-color 200ms ease;
 }
 
 .member-card:hover {
-  transform: translateY(-2px);
   border-color: var(--accent-deep);
-  box-shadow: var(--soft-shadow);
+  border-left-color: var(--accent-deep);
 }
 
 .member-card .clinic {
